@@ -19,7 +19,7 @@ public class CurrencyData {
     
     @ManyToOne
     @JoinColumn(name = "api_id", nullable = false)
-    private ApiData apiData;
+    private ApiData api;
     
     public CurrencyData(){
     	
@@ -66,17 +66,17 @@ public class CurrencyData {
 	}
 
 	public ApiData getApiData() {
-		return apiData;
+		return api;
 	}
 
 	public void setApiData(ApiData apiData) {
-		this.apiData = apiData;
+		this.api = apiData;
 	}
 
 	@Override
 	public String toString() {
 		return "CurrencyData [code=" + code + ", symbol=" + symbol + ", rate=" + rate + ", description=" + description
-				+ ", rate_float=" + rate_float + ", apiData=" + apiData + "]";
+				+ ", rate_float=" + rate_float + ", apiData=" + api + "]";
 	}
 
 }
